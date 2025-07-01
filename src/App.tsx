@@ -1,6 +1,6 @@
-// ✅ Merged App.tsx with React Router and demo user switcher functionality
+// ✅ Fixed App.tsx with TypeScript errors resolved
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { AuthProvider } from "./contexts/auth-context"
 import { Toaster } from "./components/toaster"
@@ -24,7 +24,6 @@ import CourseDetail from "./pages/course-detail"
 import Profile from "./pages/profile"
 import { AIRecommendationsWithSuspense, CourseWizardWithSuspense } from "./components/performance/lazy-components"
 import { Router as DashboardRouter } from "./components/Router"
-import type { DashboardConfig } from "./types/dashboard"
 import type { User } from "./types"
 
 import "./styles/globals.css"
@@ -69,37 +68,6 @@ function App() {
     email: "admin@example.com",
     role: "admin",
     joinDate: "2023-12-01"
-  }
-
-  // Dashboard configurations
-  const mockDashboardConfig: DashboardConfig = {
-    user: mockStudentUser,
-    navigation: [
-      { id: "1", path: "/", label: "Dashboard", icon: "dashboard", isActive: true },
-      { id: "2", path: "/profile", label: "Profile", icon: "settings", isActive: false },
-      { id: "3", path: "/my-courses", label: "My Courses", icon: "courses", isActive: false },
-      { id: "4", path: "/browse", label: "Browse Courses", icon: "browse", isActive: false },
-      { id: "5", path: "/sessions", label: "Live Sessions", icon: "video", isActive: false },
-      { id: "6", path: "/assignments", label: "Assignments", icon: "assignments", isActive: false },
-      { id: "7", path: "/support", label: "Support", icon: "support", isActive: false },
-      { id: "8", path: "/settings", label: "Settings", icon: "settings", isActive: false },
-    ]
-  }
-
-  const mockAdminConfig: DashboardConfig = {
-    user: mockAdminUser,
-    navigation: [
-      { id: "1", path: "/", label: "Dashboard", icon: "dashboard", isActive: true },
-      { id: "2", path: "/courses", label: "Course Management", icon: "courses", isActive: false },
-      { id: "3", path: "/students", label: "Students", icon: "students", isActive: false },
-      { id: "4", path: "/mentors", label: "Mentors", icon: "mentor", isActive: false },
-      { id: "5", path: "/schedule", label: "Schedule", icon: "schedule", isActive: false },
-      { id: "6", path: "/assignments", label: "Assignments", icon: "assignments", isActive: false },
-      { id: "7", path: "/certificates", label: "Certificates", icon: "certificates", isActive: false },
-      { id: "8", path: "/payments", label: "Payments", icon: "payments", isActive: false },
-      { id: "9", path: "/forums", label: "Forums", icon: "forums", isActive: false },
-      { id: "10", path: "/settings", label: "Settings", icon: "settings", isActive: false },
-    ]
   }
 
   return (

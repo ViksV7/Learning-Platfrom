@@ -5,6 +5,10 @@ export const adminConfig: DashboardConfig = {
     id: "1",
     name: "Admin",
     role: "admin",
+    email: "admin@example.com",
+    joinDate: new Date().toISOString(),
+    lastLogin: new Date().toISOString(),
+    status: "active",
   },
   navigation: [
     { id: "1", label: "Dashboard", icon: "dashboard", path: "/", isActive: true },
@@ -124,14 +128,14 @@ export const adminConfig: DashboardConfig = {
     },
   ],
   notifications: [
-    "🚨 Server maintenance scheduled for tonight 2:00 AM - 4:00 AM",
-    "📚 New course 'Advanced DevOps' has been published",
-    "👥 250+ new student registrations this week",
-    "💰 Payment gateway integration completed successfully",
-    "🎯 Monthly target achieved: 95% course completion rate",
-    "📊 Weekly analytics report is ready for review",
-    "🔔 15 new instructor applications pending approval",
-    "⚡ System performance optimized - 40% faster loading",
+    { id: "1", title: "Server Maintenance", type: "warning", timestamp: new Date().toISOString(), read: false, message: "🚨 Server maintenance scheduled for tonight 2:00 AM - 4:00 AM" },
+    { id: "2", title: "New Course Published", type: "info", timestamp: new Date().toISOString(), read: false, message: "📚 New course 'Advanced DevOps' has been published" },
+    { id: "3", title: "New Registrations", type: "info", timestamp: new Date().toISOString(), read: false, message: "👥 250+ new student registrations this week" },
+    { id: "4", title: "Payment Gateway", type: "success", timestamp: new Date().toISOString(), read: false, message: "💰 Payment gateway integration completed successfully" },
+    { id: "5", title: "Monthly Target Achieved", type: "success", timestamp: new Date().toISOString(), read: false, message: "🎯 Monthly target achieved: 95% course completion rate" },
+    { id: "6", title: "Weekly Report", type: "info", timestamp: new Date().toISOString(), read: false, message: "📊 Weekly analytics report is ready for review" },
+    { id: "7", title: "Instructor Applications", type: "warning", timestamp: new Date().toISOString(), read: false, message: "🔔 15 new instructor applications pending approval" },
+    { id: "8", title: "System Performance", type: "success", timestamp: new Date().toISOString(), read: false, message: "⚡ System performance optimized - 40% faster loading" },
   ],
 }
 
@@ -140,6 +144,10 @@ export const userConfig: DashboardConfig = {
     id: "2",
     name: "Arjun Mehta",
     role: "user",
+    email: "arjun.mehta@example.com",
+    joinDate: new Date().toISOString(),
+    lastLogin: new Date().toISOString(),
+    status: "active",
   },
   navigation: [
     { id: "1", label: "Dashboard", icon: "dashboard", path: "/", isActive: true },
@@ -161,6 +169,13 @@ export const userConfig: DashboardConfig = {
       progress: 78,
       icon: "fullstack",
       color: "from-blue-500 to-blue-600",
+      description: "Learn to build full stack applications using MERN.",
+      instructor: "John Doe",
+      students: 120,
+      duration: "3 months",
+      level: "Intermediate",
+      price: "199", // Added missing property
+      category: "Web Development", // Added missing property
     },
     {
       id: "2",
@@ -169,6 +184,13 @@ export const userConfig: DashboardConfig = {
       progress: 45,
       icon: "blockchain",
       color: "from-purple-500 to-purple-600",
+      description: "Understand blockchain technology and develop cryptocurrency.",
+      instructor: "Jane Smith",
+      students: 80,
+      duration: "2 months",
+      level: "Advanced",
+      price: "299", // Changed to string
+      category: "Blockchain", // Added missing property
     },
     {
       id: "3",
@@ -177,6 +199,13 @@ export const userConfig: DashboardConfig = {
       progress: 100,
       icon: "ai",
       color: "from-green-500 to-green-600",
+      description: "Master AI and ML concepts using Python and TensorFlow.",
+      instructor: "Ankit Singh",
+      students: 200,
+      duration: "4 months",
+      level: "Intermediate",
+      price: "249", // Changed to string
+      category: "AI/ML", // Added missing property
     },
     {
       id: "4",
@@ -185,6 +214,13 @@ export const userConfig: DashboardConfig = {
       progress: 0,
       icon: "cloud",
       color: "from-orange-500 to-orange-600",
+      description: "Learn DevOps practices and cloud computing with AWS.",
+      instructor: "Sneha Patel",
+      students: 50,
+      duration: "3 months",
+      level: "Beginner",
+      price: "199", // Added missing property
+      category: "DevOps", // Added missing property
     },
   ],
   sessions: [
@@ -214,13 +250,13 @@ export const userConfig: DashboardConfig = {
     },
   ],
   notifications: [
-    "🎯 Assignment 'React Project' due in 2 days",
-    "📺 Live session 'Advanced React Hooks' starting in 30 minutes",
-    "🏆 Congratulations! You've completed AI/ML Fundamentals course",
-    "📚 New learning materials added to Blockchain Development",
-    "💬 New message from mentor Priya Sharma",
-    "⭐ Rate your completed course to help other students",
-    "🔔 Weekly progress report: You're 15% ahead of schedule!",
-    "🎉 You've earned 'Fast Learner' badge for completing 3 modules this week",
+    { id: "1", title: "Assignment Due", type: "warning", timestamp: new Date().toISOString(), read: false, message: "🎯 Assignment 'React Project' due in 2 days" },
+    { id: "2", title: "Live Session Reminder", type: "info", timestamp: new Date().toISOString(), read: false, message: "📺 Live session 'Advanced React Hooks' starting in 30 minutes" },
+    { id: "3", title: "Course Completion", type: "success", timestamp: new Date().toISOString(), read: false, message: "🏆 Congratulations! You've completed AI/ML Fundamentals course" },
+    { id: "4", title: "New Materials Added", type: "info", timestamp: new Date().toISOString(), read: false, message: "📚 New learning materials added to Blockchain Development" },
+    { id: "5", title: "Message from Mentor", type: "info", timestamp: new Date().toISOString(), read: false, message: "💬 New message from mentor Priya Sharma" },
+    { id: "6", title: "Course Rating Reminder", type: "warning", timestamp: new Date().toISOString(), read: false, message: "⭐ Rate your completed course to help other students" },
+    { id: "7", title: "Weekly Progress Report", type: "info", timestamp: new Date().toISOString(), read: false, message: "🔔 Weekly progress report: You're 15% ahead of schedule!" },
+    { id: "8", title: "Badge Earned", type: "success", timestamp: new Date().toISOString(), read: false, message: "🎉 You've earned 'Fast Learner' badge for completing 3 modules this week" },
   ],
 }

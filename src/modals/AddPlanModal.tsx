@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import type { PaymentPlan } from '../../types/dashboard'
+import type { PaymentPlan } from '@/types/dashboard'
 
 interface AddPlanModalProps {
   isOpen: boolean

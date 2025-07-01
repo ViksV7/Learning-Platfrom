@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import type { LiveSession } from '../../types/dashboard'
+import type { LiveSession } from '@/types/dashboard'
 
 interface LiveSessionsProps {
   onNavigate?: (path: string) => void
@@ -16,7 +16,7 @@ export const LiveSessions: React.FC<LiveSessionsProps> = () => {
       date: '2024-04-25',
       time: '10:00',
       duration: '2 hours',
-      maxStudents: '100',
+      maxStudents: 100, // Changed from string to number
       enrolled: 45,
       status: 'upcoming',
       description: 'Interactive Q&A session covering blockchain basics and real-world applications',
@@ -29,7 +29,7 @@ export const LiveSessions: React.FC<LiveSessionsProps> = () => {
       date: '2024-04-26',
       time: '14:00',
       duration: '3 hours',
-      maxStudents: '50',
+      maxStudents: 50,
       enrolled: 32,
       status: 'upcoming',
       description: 'Hands-on workshop building smart contracts with Solidity',
@@ -42,7 +42,7 @@ export const LiveSessions: React.FC<LiveSessionsProps> = () => {
       date: '2024-04-28',
       time: '16:00',
       duration: '2.5 hours',
-      maxStudents: '75',
+      maxStudents: 75,
       enrolled: 68,
       status: 'upcoming',
       description: 'Exploring advanced DeFi protocols and yield farming strategies',
@@ -55,7 +55,7 @@ export const LiveSessions: React.FC<LiveSessionsProps> = () => {
       date: '2024-04-20',
       time: '15:00',
       duration: '2 hours',
-      maxStudents: '60',
+      maxStudents: 60,
       enrolled: 55,
       status: 'completed',
       description: 'Comprehensive overview of Web3 security vulnerabilities and prevention'
@@ -67,7 +67,7 @@ export const LiveSessions: React.FC<LiveSessionsProps> = () => {
       date: '2024-04-18',
       time: '11:00',
       duration: '3 hours',
-      maxStudents: '40',
+      maxStudents: 40,
       enrolled: 38,
       status: 'completed',
       description: 'Building a complete NFT marketplace from scratch'

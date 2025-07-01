@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import type { Course } from '../../types/dashboard'
+import type { Course } from '@/types/dashboard'
 
 interface BrowseCoursesProps {
   onNavigate?: (path: string) => void

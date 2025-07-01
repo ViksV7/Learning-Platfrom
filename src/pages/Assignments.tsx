@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import type { Assignment } from '../../types/dashboard'
+import type { Assignment } from '@/types/dashboard'
 
 interface AssignmentsProps {
   onNavigate?: (path: string) => void

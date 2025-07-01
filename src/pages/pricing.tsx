@@ -1,5 +1,5 @@
-import React from 'react';
-import { Check, Star, Mail, Phone, Calendar, Users, Award, Briefcase, Clock, BookOpen, Trophy, Target } from 'lucide-react';
+// import React from 'react';
+import { Check, Star, Mail,Award, Phone, Calendar, Briefcase, Clock,  Trophy, Target } from 'lucide-react';
 
 function  Pricing() {
   const plans = [

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useParams } from "react-router-dom"
+// import { useParams } from "react-router-dom"
 import {
   BookOpen,
   Clock,
@@ -28,9 +28,9 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import CoursePlayer from "../components/course-player"
 
 const CourseDetail = () => {
-  const { id } = useParams()
+  // const { id } = useParams()
   const [expandedModules, setExpandedModules] = useState<number[]>([0])
-  const [currentLesson, setCurrentLesson] = useState(0)
+  const [, setCurrentLesson] = useState(0)
 
   // Mock course data - in real app, this would come from API based on ID
   const course = {

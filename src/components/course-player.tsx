@@ -13,11 +13,11 @@ interface CoursePlayerProps {
   onComplete?: () => void
 }
 
-const CoursePlayer = ({ videoUrl, title, duration, onComplete }: CoursePlayerProps) => {
+const CoursePlayer = ({ videoUrl, title, duration }: CoursePlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false)
-  const [currentTime, setCurrentTime] = useState(0)
+  const [currentTime] = useState(0)
   const [totalTime] = useState(1800) // 30 minutes in seconds
-  const [volume, setVolume] = useState(80)
+  const [volume] = useState(80)
 
   const togglePlay = () => {
     setIsPlaying(!isPlaying)

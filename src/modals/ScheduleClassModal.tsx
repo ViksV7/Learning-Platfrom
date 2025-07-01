@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import type { LiveSession } from '../../types/dashboard'
+import type { LiveSession } from '@/types/dashboard'
 
 interface ScheduleClassModalProps {
   isOpen: boolean
@@ -28,7 +28,10 @@ export const ScheduleClassModal: React.FC<ScheduleClassModalProps> = ({ isOpen, 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    onScheduleClass(formData)
+    onScheduleClass({
+      ...formData,
+      maxStudents: Number(formData.maxStudents) // Convert maxStudents to a number
+    })
     setFormData({
       title: '',
       instructor: '',

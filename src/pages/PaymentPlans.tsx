@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import type { PaymentPlan } from '../../types/dashboard'
+import type { PaymentPlan } from '@/types/dashboard'
 import { AddPlanModal } from '../modals/AddPlanModal'
 
 interface PaymentPlansProps {

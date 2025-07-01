@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom"
 import { Menu, X, BookOpen } from "lucide-react"
 import { motion } from "framer-motion"
 import Notifications from "./notifications"
-import AuthButtons from "../pages/auth/auth-buttons"
+// import AuthButtons from "../pages/auth/auth-buttons"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -93,7 +93,7 @@ const Navbar = () => {
             
             <div className="flex items-center space-x-4">
               <Notifications />
-              <AuthButtons />
+              {/* <AuthButtons /> */}
             </div>
           </div>
 
@@ -146,7 +146,7 @@ const Navbar = () => {
                 <div className="flex justify-center mb-2">
                   <Notifications />
                 </div>
-                <AuthButtons />
+                {/* <AuthButtons /> */}
               </motion.div>
             </div>
           </motion.div>

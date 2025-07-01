@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import CoursesPage from '@/components/courses';
 
 const Courses = () => {

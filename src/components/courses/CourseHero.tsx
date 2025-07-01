@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, BookOpen, Users } from 'lucide-react';
 

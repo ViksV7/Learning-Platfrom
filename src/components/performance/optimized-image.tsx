@@ -19,6 +19,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(
   ({ src, alt, width, height, className = "", placeholder = "/placeholder.svg", quality = 75, priority = false }) => {
     const [isLoaded, setIsLoaded] = useState(false)
     const [hasError, setHasError] = useState(false)
+    
+    // Get the ref and intersection status from the hook
     const { elementRef, isIntersecting } = useIntersectionObserver({
       threshold: 0.1,
       rootMargin: "50px",
@@ -54,7 +56,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(
     const shouldLoad = priority || isIntersecting
 
     return (
-      <div ref={elementRef} className={`relative overflow-hidden ${className}`} style={{ width, height }}>
+      <div ref={elementRef as React.RefObject<HTMLDivElement>} className={`relative overflow-hidden ${className}`} style={{ width, height }}>
         {/* Placeholder */}
         {!isLoaded && (
           <div

@@ -39,7 +39,7 @@ interface StreamPlayerProps {
 
 const StreamPlayer: React.FC<StreamPlayerProps> = memo(
   ({
-    streamId,
+   
     title,
     instructor,
     isLive = false,

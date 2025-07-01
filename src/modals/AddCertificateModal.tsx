@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import type { CertificateTemplate } from '../../types/dashboard'
+import type { CertificateTemplate } from '@/types/dashboard'
 
 interface AddCertificateModalProps {
   isOpen: boolean

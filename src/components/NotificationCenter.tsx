@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import type { Notification } from '../types/dashboard'
 
 interface NotificationCenterProps {
@@ -21,15 +21,6 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
       case 'warning': return '⚠️'
       case 'error': return '❌'
       default: return 'ℹ️'
-    }
-  }
-
-  const getNotificationColor = (type: string) => {
-    switch (type) {
-      case 'success': return 'border-l-green-500 bg-green-50'
-      case 'warning': return 'border-l-yellow-500 bg-yellow-50'
-      case 'error': return 'border-l-red-500 bg-red-50'
-      default: return 'border-l-blue-500 bg-blue-50'
     }
   }
 

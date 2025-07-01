@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BookOpen, Users, Award, Code, Globe, Shield, Zap, Target, Star, ArrowRight, CheckCircle } from "lucide-react"
 
 const Products = () => {

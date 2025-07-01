@@ -176,13 +176,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return { success: true, message: `Successfully signed in with ${provider}` }
   }
 
-  const resendVerificationEmail = async (email: string): Promise<{ success: boolean; message: string }> => {
+  const resendVerificationEmail = async (): Promise<{ success: boolean; message: string }> => {
     // Simulate API call delay
     await new Promise((resolve) => setTimeout(resolve, 1000))
     return { success: true, message: "Verification email sent successfully!" }
   }
 
-  const checkVerificationStatus = async (email: string): Promise<boolean> => {
+  const checkVerificationStatus = async (): Promise<boolean> => {
     // Simulate checking verification status
     await new Promise((resolve) => setTimeout(resolve, 500))
     // Mock: return true after 30 seconds for demo purposes
@@ -207,7 +207,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }
 
-  const resetPassword = async (token: string, password: string): Promise<{ success: boolean; message: string }> => {
+  const resetPassword = async (): Promise<{ success: boolean; message: string }> => {
     // Simulate API call delay
     await new Promise((resolve) => setTimeout(resolve, 1500))
 

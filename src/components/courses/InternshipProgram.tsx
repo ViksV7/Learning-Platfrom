@@ -1,7 +1,7 @@
 
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Users, Code, Award, Calendar } from 'lucide-react';
+import { Users, Code, Award, Calendar } from 'lucide-react';
 
 const InternshipProgram = () => {
   const internshipFeatures = [

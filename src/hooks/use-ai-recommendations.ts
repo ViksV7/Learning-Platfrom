@@ -139,7 +139,7 @@ export const useAIRecommendations = (currentCourseId?: string): RecommendationEn
     // Score courses based on user preferences
     const scoredCourses = allCourses.map((course) => ({
       ...course,
-      score: calculateRecommendationScore(course, userInterests, userLevel, user.enrolledCourses),
+      score: calculateRecommendationScore(course, userInterests, userLevel),
     }))
 
     // Personalized courses (highest scoring)
@@ -200,7 +200,6 @@ export const useAIRecommendations = (currentCourseId?: string): RecommendationEn
     course: Course,
     userInterests: string[],
     userLevel: string,
-    enrolledCourses: string[],
   ): number => {
     let score = 0
 

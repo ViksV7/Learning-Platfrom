@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Briefcase, Users } from 'lucide-react';
+import {  Clock, Briefcase  } from 'lucide-react';
 import CurriculumBreakdown from './CurriculumBreakdown';
 import InternshipProgram from './InternshipProgram';
 

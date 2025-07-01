@@ -8,14 +8,14 @@ interface CourseCardProps {
 }
 
 export const CourseCard: React.FC<CourseCardProps> = ({ course, showContinueButton = false }) => {
-  const getIcon = (iconName: string) => {
+  const getIcon = (iconName?: string) => {
     const icons: { [key: string]: string } = {
       ai: "🤖",
       blockchain: "⛓️",
       web3: "🌐",
       fullstack: "💻",
     }
-    return icons[iconName] || "📚"
+    return icons[iconName ?? ""] || "📚"
   }
 
   return (

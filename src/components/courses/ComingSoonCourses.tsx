@@ -1,7 +1,7 @@
 
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Code, Brain, Zap, Globe, Shield } from 'lucide-react';
+import {  Brain, Zap, Globe, Shield } from 'lucide-react';
 
 const ComingSoonCourses = () => {
   const upcomingCourses = [

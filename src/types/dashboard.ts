@@ -49,7 +49,7 @@ export interface LiveSession {
   date: string
   time: string
   duration: string
-  maxStudents: string
+  maxStudents: number
   enrolled: number
   status: "upcoming" | "live" | "completed"
   description: string
